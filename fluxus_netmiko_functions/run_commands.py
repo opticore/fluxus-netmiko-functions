@@ -1,5 +1,6 @@
 from typing import Annotated
 
+from nornir.core import Nornir
 from nornir_netmiko.tasks import netmiko_send_command
 from fluxus_sdk.logger import logger
 from fluxus_sdk.func import fluxus_func
@@ -13,6 +14,7 @@ from fluxus_netmiko_functions.textfsm import get_state_textfsm
     dir_path="netmiko/",
 )
 def run_command(
+    nornir: Annotated[Nornir, "The Nornir object."],
     command: Annotated[str, "The command to run."],
     use_textfsm: Annotated[bool, "Use textfsm to parse the output."] = False,
 ) -> Annotated[dict, "The output of the command."]:
