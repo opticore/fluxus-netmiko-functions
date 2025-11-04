@@ -9,8 +9,8 @@ from nornir.core.exceptions import NornirSubTaskError
 from fluxus_sdk.logger import logger
 from fluxus_sdk.func import fluxus_func
 
-from fluxus_netmikto_functions.dispatcher import dispatcher
-from fluxus_netmikto_functions.utils import log_nornir_sub_exception, write_to_file
+from fluxus_netmiko_functions.dispatcher import dispatcher
+from fluxus_netmiko_functions.utils import log_nornir_sub_exception, write_to_file
 
 
 def sub_collect_device_configuration(task: Task) -> Result:
@@ -60,7 +60,7 @@ def collect_device_configuration(
     nornir: Nornir,
     output: Annotated[bool, "Whether to write the configuration to a file."] = False,
     output_path: Annotated[str, "The path to write the configuration to."] = "",
-) -> Annotated[str, "The path to the directory containing the configuration files."]:
+):
     """Collect the configuration of all devices in the network.
 
     Args:
@@ -74,26 +74,13 @@ def collect_device_configuration(
     result = nornir.run(task=sub_collect_device_configuration)
     logger.info("Result of configuration collection:")
 
-    timestamp = datetime.now().strftime(app_config.SETTINGS.workspace.timestamp)
-
-    if not output_path:
-        base_output_path = os.path.join(
-            app_config.SETTINGS.workspace.path, "snapshots", timestamp, "configs"
-        )
-    else:
-        base_output_path = os.path.join(
-            output_path,
-            "configs",
-        )
-
     for host, task_result in result.items():
         if output:
             write_to_file(
                 os.path.join(
-                    base_output_path,
+                    output_path,
                     f"{host}.cfg",
                 ),
                 task_result.result["config"],
             )
             logger.info("Configuration collection finished!")
-    return base_output_path
