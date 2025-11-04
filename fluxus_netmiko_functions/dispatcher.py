@@ -52,7 +52,7 @@ def dispatcher(task: Task, method: str, *args, **kwargs) -> Result:
         logger.error(
             f"Unable to find the driver for {method} for platform: {task.host.platform}, preemptively failed.",
         )
-        raise FluxusNetmikoExpection(
+        raise FluxusNetmikoException(
             f"Unable to find the driver for {method} for platform: {task.host.platform}, preemptively failed."
         )
 
@@ -65,7 +65,7 @@ def dispatcher(task: Task, method: str, *args, **kwargs) -> Result:
         logger.error(
             f"Unable to locate the class {driver}, preemptively failed.",
         )
-        raise FluxusNetmikoExpection(
+        raise FluxusNetmikoException(
             f"Unable to locate the class {driver}, preemptively failed."
         )
 
@@ -75,7 +75,7 @@ def dispatcher(task: Task, method: str, *args, **kwargs) -> Result:
         logger.error(
             f"Unable to locate the method {method} for {driver}, preemptively failed.",
         )
-        raise FluxusNetmikoExpection(
+        raise FluxusNetmikoException(
             f"Unable to locate the method {method} for {driver}, preemptively failed."
         )
 
