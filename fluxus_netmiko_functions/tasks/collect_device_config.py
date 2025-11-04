@@ -5,6 +5,7 @@ from datetime import datetime
 from nornir.core import Nornir
 from nornir.core.task import Task, Result
 from nornir.core.exceptions import NornirSubTaskError
+from typing import Annotated
 
 from fluxus_sdk.logger import logger
 from fluxus_sdk.func import fluxus_func
