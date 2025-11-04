@@ -26,7 +26,7 @@ _DEFAULT_DRIVERS_MAPPING = {
 }
 
 
-def dispatcher(task: Task, method: str, logger, *args, **kwargs) -> Result:
+def dispatcher(task: Task, method: str, *args, **kwargs) -> Result:
     """Helper Task to retrieve a given Nornir task for a given platform.
 
     Args:
@@ -52,7 +52,7 @@ def dispatcher(task: Task, method: str, logger, *args, **kwargs) -> Result:
         logger.error(
             f"Unable to find the driver for {method} for platform: {task.host.platform}, preemptively failed.",
         )
-        raise OptiNetworkAutomationException(
+        raise FluxusNetmikoExpection(
             f"Unable to find the driver for {method} for platform: {task.host.platform}, preemptively failed."
         )
 
@@ -65,7 +65,7 @@ def dispatcher(task: Task, method: str, logger, *args, **kwargs) -> Result:
         logger.error(
             f"Unable to locate the class {driver}, preemptively failed.",
         )
-        raise OptiNetworkAutomationException(
+        raise FluxusNetmikoExpection(
             f"Unable to locate the class {driver}, preemptively failed."
         )
 
@@ -75,7 +75,7 @@ def dispatcher(task: Task, method: str, logger, *args, **kwargs) -> Result:
         logger.error(
             f"Unable to locate the method {method} for {driver}, preemptively failed.",
         )
-        raise OptiNetworkAutomationException(
+        raise FluxusNetmikoExpection(
             f"Unable to locate the method {method} for {driver}, preemptively failed."
         )
 

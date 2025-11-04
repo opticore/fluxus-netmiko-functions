@@ -1,0 +1,16 @@
+[project]
+name = "fluxus-netmiko-functions"
+version = "0.1.0"
+description = "Fluxus Netmiko Functions"
+authors = [
+    { name = "Kristian Carbonaro", email = "kristian.carbonaro@opticoreit.com" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.setuptools]
+packages = ["fluxus_netmiko_functions"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
