@@ -19,7 +19,7 @@ def write_json_to_file(file_path, data):
         json.dump(data, file, indent=4)
 
 
-def log_nornir_sub_exception(logger, exception):
+def log_nornir_sub_exception(exception):
     exception = exception.result[-1].exception
     logger.error(exception)
     raise exception

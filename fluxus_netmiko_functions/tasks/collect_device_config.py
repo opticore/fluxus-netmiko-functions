@@ -76,6 +76,8 @@ def collect_device_configuration(
     logger.info("Result of configuration collection:")
 
     for host, task_result in result.items():
+        logger.info(f"Configuration collection finished for {host}!")
+        logger.debug(f"Configuration: \n{task_result.result}")
         if output:
             write_to_file(
                 os.path.join(
