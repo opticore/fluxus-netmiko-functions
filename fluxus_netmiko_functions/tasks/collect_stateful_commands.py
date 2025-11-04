@@ -10,7 +10,7 @@ from datetime import datetime
 from typing import Annotated
 
 from fluxus_netmiko_functions.textfsm import get_state_textfsm
-from fluxus_netmikto_functions.utils import write_to_file, write_json_to_file
+from fluxus_netmiko_functions.utils import write_to_file, write_json_to_file
 
 from fluxus_sdk.logger import logger
 from fluxus_sdk.func import fluxus_func
