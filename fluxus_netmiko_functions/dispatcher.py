@@ -9,20 +9,20 @@ from fluxus_netmiko_functions.exceptions import FluxusNetmikoException
 
 
 _DEFAULT_DRIVERS_MAPPING = {
-    "default": "fluxus_netmikto_functions.drivers.default.NetboxNornirDriver",
-    "default_netmiko": "fluxus_netmikto_functions.drivers.default.NetmikoNetboxNornirDriver",
-    "arista_eos": "fluxus_netmikto_functions.drivers.arista_eos.NetboxNornirDriver",
-    "cisco_aireos": "fluxus_netmikto_functions.drivers.cisco_aireos.NetboxNornirDriver",
-    "cisco_asa": "fluxus_netmikto_functions.drivers.cisco_asa.NetboxNornirDriver",
-    "cisco_ios": "fluxus_netmikto_functions.drivers.cisco_ios.NetboxNornirDriver",
-    "cisco_ios_restconf": "fluxus_netmikto_functions.drivers.cisco_ios_restconf.NetboxNornirDriver",
-    "cisco_nxos": "fluxus_netmikto_functions.drivers.cisco_nxos.NetboxNornirDriver",
-    "cisco_wlc": "fluxus_netmikto_functions.drivers.cisco_wlc.NetboxNornirDriver",
-    "cisco_xr": "fluxus_netmikto_functions.drivers.cisco_ios_xr.NetboxNornirDriver",
-    "fortinet_fortios": "fluxus_netmikto_functions.drivers.fortinet_fortios.NetboxNornirDriver",
-    "juniper_junos": "fluxus_netmikto_functions.drivers.juniper_junos.NetboxNornirDriver",
-    "netscaler": "fluxus_netmikto_functions.drivers.netscaler.NetboxNornirDriver",
-    "paloalto_panos": "fluxus_netmikto_functions.drivers.paloalto_panos.NetboxNornirDriver",
+    "default": "fluxus_netmiko_functions.drivers.default.NetboxNornirDriver",
+    "default_netmiko": "fluxus_netmiko_functions.drivers.default.NetmikoNetboxNornirDriver",
+    "arista_eos": "fluxus_netmiko_functions.drivers.arista_eos.NetboxNornirDriver",
+    "cisco_aireos": "fluxus_netmiko_functions.drivers.cisco_aireos.NetboxNornirDriver",
+    "cisco_asa": "fluxus_netmiko_functions.drivers.cisco_asa.NetboxNornirDriver",
+    "cisco_ios": "fluxus_netmiko_functions.drivers.cisco_ios.NetboxNornirDriver",
+    "cisco_ios_restconf": "fluxus_netmiko_functions.drivers.cisco_ios_restconf.NetboxNornirDriver",
+    "cisco_nxos": "fluxus_netmiko_functions.drivers.cisco_nxos.NetboxNornirDriver",
+    "cisco_wlc": "fluxus_netmiko_functions.drivers.cisco_wlc.NetboxNornirDriver",
+    "cisco_xr": "fluxus_netmiko_functions.drivers.cisco_ios_xr.NetboxNornirDriver",
+    "fortinet_fortios": "fluxus_netmiko_functions.drivers.fortinet_fortios.NetboxNornirDriver",
+    "juniper_junos": "fluxus_netmiko_functions.drivers.juniper_junos.NetboxNornirDriver",
+    "netscaler": "fluxus_netmiko_functions.drivers.netscaler.NetboxNornirDriver",
+    "paloalto_panos": "fluxus_netmiko_functions.drivers.paloalto_panos.NetboxNornirDriver",
 }
 
 
