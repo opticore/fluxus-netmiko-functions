@@ -109,7 +109,7 @@ def get_device_state(task: Task) -> Result:
     dir_path="netmiko/",
 )
 def collect_stateful_commands(
-    nornir: Nornir,
+    nornir: Annotated[Nornir, "The Nornir object."],
     output: Annotated[bool, "Whether to write output to a file."] = False,
     output_folder: Annotated[str, "Folder to save output files."] = "",
 ):

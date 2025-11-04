@@ -58,7 +58,7 @@ def sub_collect_device_configuration(task: Task) -> Result:
     dir_path="netmiko/",
 )
 def collect_device_configuration(
-    nornir: Nornir,
+    nornir: Annotated[Nornir, "The Nornir object."],
     output: Annotated[bool, "Whether to write the configuration to a file."] = False,
     output_path: Annotated[str, "The path to write the configuration to."] = "",
 ):
