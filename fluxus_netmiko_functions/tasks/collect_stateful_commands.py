@@ -105,6 +105,7 @@ def get_device_state(task: Task) -> Result:
 
 @fluxus_func(
     name="collect_stateful_commands",
+    label="Collect Stateful Commands",
     description="Collect the state of network devices.",
     dir_path="netmiko/",
 )

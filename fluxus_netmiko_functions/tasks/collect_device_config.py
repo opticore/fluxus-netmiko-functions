@@ -54,6 +54,7 @@ def sub_collect_device_configuration(task: Task) -> Result:
 
 @fluxus_func(
     name="collect_device_configuration",
+    label="Collect Device Configuration",
     description="Collect the configuration of all devices in the network.",
     dir_path="netmiko/",
 )

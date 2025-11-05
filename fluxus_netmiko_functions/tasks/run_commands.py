@@ -10,6 +10,7 @@ from fluxus_netmiko_functions.textfsm import get_state_textfsm
 
 @fluxus_func(
     name="run_command",
+    label="Run Command Net Device",
     description="Run a command on a network device.",
     dir_path="netmiko/",
 )
